@@ -1,12 +1,12 @@
 from aiogram import executor, types, filters
-from config import dp
+from config import dp,Dispatcher
 from eng import model
 from keyboards import kb, kb_samsung, kb_iphone
 
 # Importing models dictionary in uzbek language
 eng_model = model()
 
-@dp.message_handler(commands=['start', 'help'])
+@dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
     await message.reply("Get phones characteristic⚙️\nChoose Phone Brand📱", reply_markup=kb)
 
@@ -195,6 +195,8 @@ async def iphone(message: types.Message):
     media.attach_photo(photo=types.InputFile('./Samsung/samsung s 22.jpg'), caption=eng_model['samsung']['samsung s22'])
     await message.answer_media_group(media=media)
 
+# def register_handler_commands(dp: Dispatcher):
+#     dp.register_message_handler(send_welcome, commands=['start'])
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
