@@ -8,16 +8,18 @@ eng_model = model()
 
 @dp.message_handler(commands=['start', 'help'])
 async def send_welcome(message: types.Message):
-    await message.reply("Get phones characteristic\nPowered by @bahrombek19.", reply_markup=kb)
+    await message.reply("Get phones characteristic⚙️\nChoose Phone Brand📱", reply_markup=kb)
 
 
 @dp.message_handler(filters.Text(contains='iPhone📱'))
 async def send_kb(message: types.Message):
-    await message.answer(text='Choose iPhone Model', reply_markup=kb_iphone)
+    await message.answer(text='Choose iPhone📱 Model', reply_markup=kb_iphone)
+    await message.delete()
 
 @dp.message_handler(filters.Text(contains='Samsung📱'))
 async def send_samsung(message: types.Message):
-    await message.answer(text='Choose Samsung Model', reply_markup=kb_samsung)
+    await message.answer(text='Choose Samsung📱 Model', reply_markup=kb_samsung)
+    await message.delete()
 
 @dp.message_handler(filters.Text(contains='Go Back'))
 async def send_iphone(message: types.Message):

@@ -1,7 +1,7 @@
 import logging
 from aiogram import Bot, Dispatcher
 
-API_Key = "TOKEN HERE"
+API_Key = ""
 
 logging.basicConfig(level=logging.INFO)
 
