@@ -1,0 +1,9 @@
+Features to improve bot named @smartfonhaqida_bot and we want in future
+
+Big goals:
+    Make admin feature that adds phones by own and it shows in buttons
+
+Minor goals:
+    Fix data and add more information for each phones
+    Add new brands:Xiaomi,Poco,Samsung A,J,M series,iPad and Macbook brands
+    Make analytics button that shows number of users and daily activity
