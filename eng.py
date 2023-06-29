@@ -11,7 +11,7 @@ Price(2007): $499, $599
 CPU: ARM11
 Country: USA''',
 
-        'iphone 3G': '''Model: iPhone 3G
+        'iphone 3g': '''Model: iPhone 3G
 Ram: 128MB
 Storage: 8, 16 GB
 Kamera: 2 MP
@@ -21,7 +21,7 @@ Price(2008): $199, 299
 CPU: ARM11
 Country: USA''',
 
-        'iphone 3GS': '''Model: iPhone 3GS
+        'iphone 3gs': '''Model: iPhone 3GS
 Ram: 256MB
 Storage: 8, 16, 32 GB
 Kamera: 3.15 MP
@@ -111,7 +111,7 @@ Price(2017): $699, $849
 CPU: Apple A11 Bionic
 Country: USA''',
 
-        'iphone X': '''Model: iPhone X
+        'iphone x': '''Model: iPhone X
 Ram: 3GB
 Storage: 64, 256 GB
 Kamera: 12 MP
@@ -121,7 +121,7 @@ Price(2017): $999, $1149
 CPU: Apple A11 Bionic
 Country: USA''',
 
-        'iphone XR': '''Model: iPhone XR
+        'iphone xr': '''Model: iPhone XR
 Ram: 3GB
 Storage: 64, 128, 256 GB
 Kamera: 12 MP
@@ -131,7 +131,7 @@ Price(2018): $749, $799, $899
 CPU: Apple A12 Bionic
 Country: USA''',
 
-        'iphone XS': '''Model: iPhone XS
+        'iphone xs': '''Model: iPhone XS
 Ram: 4GB
 Storage: 64, 256, 512 GB
 Kamera: 12 MP
