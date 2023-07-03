@@ -10,7 +10,7 @@ Battery: 1860 mAh
 Price(2014): ~500$
 CPU: Exynos 5430
 Country: Global''',
-            'samsung a3': '''Model: Samsung Galaxy A3/A3 Duos(2014)
+            'samsung a3(2014)': '''Model: Samsung Galaxy A3/A3 Duos(2014)
 Ram: 1/1.5 GB
 Storage: 16 GB
 Kamera: 8 MP
@@ -168,7 +168,7 @@ Displey: FHD+
 Country: Global
 Android 9.0
 Fingerprint''',
-            'samsung a10(2019)': '''Model: Samsung Galaxy A10(2019)
+            'samsung a10': '''Model: Samsung Galaxy A10(2019)
 Ram: 2/4 GB
 Storage: 32 GB
 Kamera: 13 MP

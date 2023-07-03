@@ -46,7 +46,7 @@ for version in samsung_a:
 @dp.message_handler(regexp='^{version}$')
 async def samsung(message: types.Message):
     # media = types.MediaGroup()
-    # media.attach_photo(photo=types.InputFile('./Samsung/{lover_v}.jpg'), caption=eng_model['samsung']['{lover_v}'])
+    # media.attach_photo(photo=types.InputFile('./Samsung/{lover_v}.jpg'), caption=samsung_s_models['samsung a']['{lover_v}'])
     # await message.answer_media_group(media=media)
       await message.answer(text='hi')
 """

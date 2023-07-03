@@ -28,7 +28,9 @@ kb_samsung_s = types.reply_keyboard.ReplyKeyboardMarkup(resize_keyboard=True)
 button_list_samsung = [types.reply_keyboard.KeyboardButton(text=x) for x in samsung_s]
 kb_samsung_s.add(*button_list_samsung, go_back)
 
-samsung_a = ['Samsung A1', 'Samsung S2']
+samsung_a = ['Samsung Alpha', 'Samsung A3(2014)', 'Samsung A5(2014)','Samsung A5(2017)', 'Samsung A6s', 'Samsung A7(2018)','Samsung A8(2018)', 'Samsung A8+(2018)','Samsung A8s', 'Samsung A6(2018)',
+             'Samsung A6+(2018)', 'Samsung A8 Star', 'Samsung A9(2019)', 'Samsung A10', 'Samsung A10s','Samsung A10e', 'Samsung A20', 'Samsung A20e', 'Samsung A30', 'Samsung A50', 'Samsung A60', 'Samsung A70',
+             'Samsung A80', 'Samsung A2 Core', 'Samsung A40s']
 kb_samsung_a = types.reply_keyboard.ReplyKeyboardMarkup(resize_keyboard=True)
 button_list_samsung_a = [types.reply_keyboard.KeyboardButton(text=x) for x in samsung_a]
 kb_samsung_a.add(*button_list_samsung_a, go_back)
