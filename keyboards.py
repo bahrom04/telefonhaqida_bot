@@ -2,11 +2,16 @@ from aiogram import types
 
 kb = types.reply_keyboard.ReplyKeyboardMarkup(resize_keyboard=True)
 buttonslist = [types.reply_keyboard.KeyboardButton(text='iPhone📱'),
-               types.reply_keyboard.KeyboardButton(text='Samsung S📱'),
-               types.reply_keyboard.KeyboardButton(text='Samsung A📱'),
+               types.reply_keyboard.KeyboardButton(text='Samsung📱'),
                types.reply_keyboard.KeyboardButton(text='Redmi Note📱'),
                ]
 kb.add(*buttonslist)
+
+kb_samsung = types.reply_keyboard.ReplyKeyboardMarkup(resize_keyboard=True)
+buttonslist_samsung = [types.reply_keyboard.KeyboardButton(text='Samsung S📱'),
+                       types.reply_keyboard.KeyboardButton(text='Samsung A📱'),
+               ]
+kb_samsung.add(*buttonslist_samsung)
 
 # Keyboards for iPhone
 iphone = ['iPhone 1', 'iPhone 3G', 'iPhone 4', 'iPhone 5', 'iPhone 6', 'iPhone 7', 'iPhone 8',

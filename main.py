@@ -1,9 +1,12 @@
 from aiogram import executor, types, filters
-from config import dp,Dispatcher
-from eng import model
-from keyboards import kb, kb_samsung_a,kb_redmi_note,kb_samsung_s, kb_iphone, iphone, samsung_a, samsung_s,redmi_note
+from config import dp
+from iPhone.iphone_phone import iphone_models
+from Samsung.samsung_phone import samsung_s_models
+from keyboards import kb, kb_samsung_a,kb_redmi_note,kb_samsung_s, \
+    kb_iphone, iphone, samsung_a, samsung_s,redmi_note,kb_samsung
 
-eng_model = model()
+iphones = iphone_models()
+samsung_s_model = samsung_s_models()
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
@@ -18,7 +21,7 @@ for version in iphone:
 @dp.message_handler(regexp='^{version}$')
 async def iphone(message: types.Message):
     media = types.MediaGroup()
-    media.attach_photo(photo=types.InputFile('./iPhone/{lover_v}.jpg'), caption=eng_model['iphone']['{lover_v}'])
+    media.attach_photo(photo=types.InputFile('./iPhone/{lover_v}.jpg'), caption=iphones['iphone']['{lover_v}'])
     await message.answer_media_group(media=media)
 """
     # Execute the generated handler code
@@ -31,7 +34,7 @@ for version in samsung_s:
 @dp.message_handler(regexp='^{version}$')
 async def samsung(message: types.Message):
     media = types.MediaGroup()
-    media.attach_photo(photo=types.InputFile('./Samsung/{lover_v}.jpg'), caption=eng_model['samsung']['{lover_v}'])
+    media.attach_photo(photo=types.InputFile('./Samsung/{lover_v}.jpg'), caption=samsung_s_model['samsung']['{lover_v}'])
     await message.answer_media_group(media=media)
 """
     # Execute the generated handler code
@@ -68,9 +71,14 @@ async def send_kb(message: types.Message):
     await message.answer(text='Choose iPhone📱 Model', reply_markup=kb_iphone)
     await message.delete()
 
+@dp.message_handler(filters.Text(contains='Samsung📱'))
+async def send_samsung(message: types.Message):
+    await message.answer(text='Choose Samsung S📱 Model', reply_markup=kb_samsung)
+    await message.delete()
+
 @dp.message_handler(filters.Text(contains='Samsung S📱'))
 async def send_samsung(message: types.Message):
-    await message.answer(text='Choose Samsung S📱 Model', reply_markup=kb_samsung_s)
+    await message.answer(text='Choose Samsung A📱 Model', reply_markup=kb_samsung_s)
     await message.delete()
 
 @dp.message_handler(filters.Text(contains='Samsung A📱'))
