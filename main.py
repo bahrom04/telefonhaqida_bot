@@ -1,5 +1,6 @@
 from aiogram import executor, types, filters
 from config import dp
+from Data_base import user
 from iPhone.iphone_phone import iphone_models
 from Samsung.samsung_phone import samsung_s_models
 from keyboards import kb, kb_samsung_a,kb_redmi_note,kb_samsung_s, \
@@ -7,10 +8,27 @@ from keyboards import kb, kb_samsung_a,kb_redmi_note,kb_samsung_s, \
 
 iphones = iphone_models()
 samsung_s_model = samsung_s_models()
+ID = '1107759940'
+async def on_startup(_):
+    print('Bot is online')
+    user.sql_start()
+
 
 @dp.message_handler(commands=['start'])
 async def send_welcome(message: types.Message):
-    await message.reply("Get phones characteristic⚙️\nChoose Phone Brand📱", reply_markup=kb)
+    if str(message.from_user.id) in user.user_number():
+        print('This is old user')
+    else:
+        member_id = message.from_user.id
+        member_name = message.from_user.full_name
+        data = [member_name,member_id]
+        try:
+            user.add(data)
+            print('New member added to the database')
+        except:
+            print('Member already exists in the database')
+
+    await message.reply(text=message.from_user.id, reply_markup=kb)
 
 
 # Define a list of iPhone versions
@@ -98,4 +116,4 @@ async def send_iphone(message: types.Message):
 
 
 if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
+    executor.start_polling(dp, skip_updates=True, on_startup=on_startup)
