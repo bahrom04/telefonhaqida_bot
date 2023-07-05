@@ -3,6 +3,7 @@ from config import dp
 from Data_base import user
 from handlers import handlers
 
+
 async def on_startup(_):
     print('Bot is online')
     user.sql_start()
